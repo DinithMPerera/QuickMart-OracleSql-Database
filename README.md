@@ -35,5 +35,5 @@ REQUIREMENTS
  
 2. Write the DDL (SQL Code) for defining the table structure and implement the right primary and foreign key constraints.
  
-3. Populate the tables with appropriate test data, by considering question 4.
+3. Populate the tables with appropriate test data.
 
