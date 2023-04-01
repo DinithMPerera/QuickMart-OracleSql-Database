@@ -1,0 +1,87 @@
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Jone Bardwell', 8692587528, '0655, Morrow Plaza, Colombo');
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Lucita Cayet', 2881655220, '036, Butterfield Hill, Kalutara');
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Adler Pagden', 8224705566, '9437, 3rd Park, Nuwara Eliya');
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Padraic Surmon', 9762541421, '67444, Cambridge Drive, Dehiwala');
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Alyosha Hutchinges', 3298886898, '57, Onsgard Drive, Galle');
+insert into Manufacturer (ManufacturerName, RegistrationCode, Address) values ('Port Furmage', 2846364735, '32, Sullivan Crossing, Colombo');
+
+
+INSERT INTO Category (CategoryName) VALUES ('Spices');
+INSERT INTO Category (CategoryName) VALUES ('Condiments');
+INSERT INTO Category (CategoryName) VALUES ('Canned Products');
+INSERT INTO Category (CategoryName) VALUES ('Baking');
+INSERT INTO Category (CategoryName) VALUES ('Carbonated-water');
+INSERT INTO Category (CategoryName) VALUES ('Books');
+
+
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1001, 'Western', 'Colombo', 'Dehiwala', '581, Eggendart Circle, Dehiwala', '0123456789');
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1002, 'Western', 'Colombo', 'Nugegoda', '2, Gina Place Nugegoda', '0234567890');
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1003, 'Western', 'Gampaha', 'Negambo', '3608, Clarendon Trail, Negambo', '0345678901');
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1004, 'Southern', 'Galle', 'Unawatuna', '68856, School Crossing, Unawatuna', '0456789012');
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1005, 'Central', 'Kandy', 'Kandy', '9656, Katie Avenue, Kandy', '0567890123');
+insert into Outlet (OutletID, Province, District, City, Address, TelephoneNumber) values (1006, 'Southern', 'Matara', 'Hiriketiya', '37497, Schiller Circle Hiriketiya', '0789012345');
+
+
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Chilli Powder', 1, 450, 1, 1001);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Turmeric Powder', 1, 450, 1, 1001);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Cinnamon Powder', 2, 272, 1, 1002);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Cooking Oil', 3, 605, 2, 1003);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Chopped Tomatoes', 4, 50, 3, 1004);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Baking Powder', 5, 150, 4, 1005);
+insert into Product (ProductName, ManufacturerID, Price, CategoryID, OutletId) values ('Water Bottle', 6, 100, 5, 1006);
+
+
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (123456, 16, to_date('2021-07-08', 'YYYY-MM-DD'), to_date('2025-06-27', 'YYYY-MM-DD'), 9000);
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (234567, 17, to_date('2021-03-17', 'YYYY-MM-DD'), to_date('2025-03-28', 'YYYY-MM-DD'), 5440);
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (345678, 18, to_date('2021-05-14', 'YYYY-MM-DD'), to_date('2024-02-27', 'YYYY-MM-DD'), 12100);
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (456789, 19, to_date('2021-08-13', 'YYYY-MM-DD'), to_date('2025-04-28', 'YYYY-MM-DD'), 2000);
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (567890, 20, to_date('2021-01-05', 'YYYY-MM-DD'), to_date('2024-10-30', 'YYYY-MM-DD'), 2400);
+insert into Batch (BatchCode, ProductId, ManufacturedDate, ExpirationDate, RetailPrice) values (678901, 21, to_date('2021-03-18', 'YYYY-MM-DD'), to_date('2025-11-07', 'YYYY-MM-DD'), 4000);
+
+
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('DD3ZUQURZGQM63VO2FZN1IQM459I8F9YVQON', 16, 1001, 123456);
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('3M0H906B8MM0VVZMV7K4ZXYT2JOOFPWJ488T', 17, 1002, 234567);
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('AJRIIWUCXBDBAB9VCT14JZMS3HF8T38ZRKFY', 18, 1003, 345678);
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('Z5SZQUFNTGW01QZ02JO2AGK1RI731LGNG7H8', 19, 1004, 456789);
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('I6GMT6C81P4336ZSIDTJH7QVXJIWHJUSU58G', 20, 1005, 567890);
+insert into SKU (SKUCode, ProductId, OutletId, BatchCode) values ('CLBMJWPEH4XLH2PY0M9VLQZK1APWHPQFXVKV', 21, 1006, 678901);
+
+
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4041371267399499', to_date('2022-04-04', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4041370044965564', to_date('2022-08-06', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4041377391016', to_date('2022-10-26', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4017950738065878', to_date('2022-11-13', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4628724373628329', to_date('2022-07-05', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+insert into LoyaltyCard (LoyaltyCardNumber, IssuedDate, ExpiryDate, RetailPrice) values ('4489938692838', to_date('2022-10-01', 'YYYY-MM-DD'), to_date('2027-01-01', 'YYYY-MM-DD'), 500.00);
+
+
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('393818635588', 'Ameline', 'Heddon', to_date('1980-01-29', 'YYYY-MM-DD'), 'Female', '0349217910', '4041371267399499');
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('469168539109', 'Gabe', 'Thuillier', to_date('1968-08-13', 'YYYY-MM-DD'), 'Male', '0717490182', '4041370044965564');
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('363251702596', 'Rory', 'Danielovitch', to_date('1974-08-02', 'YYYY-MM-DD'), 'Female', '0116968783', '4041377391016');
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('272711928759', 'Brendan', 'Corrigane', to_date('1992-04-16', 'YYYY-MM-DD'), 'Male', '0764857754', '4628724373628329');
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('409623224215', 'Noreen', 'Bugden', to_date('1971-02-01', 'YYYY-MM-DD'), 'Female', '0279647351', '4489938692838');
+insert into Customer (NIC, FirstName , LastName, DoB, Gender, MobileNo, LoyaltyCardNumber) values ('465919080301', 'Carney', 'Steinson', to_date('1996-12-15', 'YYYY-MM-DD'), 'Male', '0766796989', '4017950738065878');
+
+
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (1, to_date('2022-02-04', 'YYYY-MM-DD'), '4041371267399499', 1001, 'DD3ZUQURZGQM63VO2FZN1IQM459I8F9YVQON');
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (2, to_date('2022-03-29', 'YYYY-MM-DD'), '4041371267399499', 1001, '3M0H906B8MM0VVZMV7K4ZXYT2JOOFPWJ488T');
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (3, to_date('2022-05-16', 'YYYY-MM-DD'), '4041370044965564', 1003, 'AJRIIWUCXBDBAB9VCT14JZMS3HF8T38ZRKFY');
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (5, to_date('2022-03-16', 'YYYY-MM-DD'), '4041377391016', 1004, 'Z5SZQUFNTGW01QZ02JO2AGK1RI731LGNG7H8');
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (7, to_date('2022-03-20', 'YYYY-MM-DD'), '4489938692838', 1005, 'I6GMT6C81P4336ZSIDTJH7QVXJIWHJUSU58G');
+insert into Bill (CustomerID, Date, LoyaltyCardNumber, OutletId, SKUCode) values (8, to_date('2022-06-05', 'YYYY-MM-DD'), '4017950738065878', 1006, 'CLBMJWPEH4XLH2PY0M9VLQZK1APWHPQFXVKV');
+
+
+insert into PurchaseHistory (BillNumber, SKUCode) values (12, DD3ZUQURZGQM63VO2FZN1IQM459I8F9YVQON);
+insert into PurchaseHistory (BillNumber, SKUCode) values (24, 3M0H906B8MM0VVZMV7K4ZXYT2JOOFPWJ488T);
+insert into PurchaseHistory (BillNumber, SKUCode) values (39, AJRIIWUCXBDBAB9VCT14JZMS3HF8T38ZRKFY);
+insert into PurchaseHistory (BillNumber, SKUCode) values (45, Z5SZQUFNTGW01QZ02JO2AGK1RI731LGNG7H8);
+insert into PurchaseHistory (BillNumber, SKUCode) values (57, I6GMT6C81P4336ZSIDTJH7QVXJIWHJUSU58G);
+insert into PurchaseHistory (BillNumber, SKUCode) values (66, CLBMJWPEH4XLH2PY0M9VLQZK1APWHPQFXVKV);
+
+
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (1, 1, 1, to_date('2022-03-17', 'YYYY-MM-DD'), to_date('2022-03-30', 'YYYY-MM-DD'));
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (2, 2, 2, to_date('2022-09-03', 'YYYY-MM-DD'), to_date('2022-03-03', 'YYYY-MM-DD'));
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (3, 3, 3, to_date('2022-11-01', 'YYYY-MM-DD'), to_date('2022-08-20', 'YYYY-MM-DD'));
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (4, 4, 4, to_date('2022-02-19', 'YYYY-MM-DD'), to_date('2022-10-25', 'YYYY-MM-DD'));
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (5, 5, 5, to_date('2022-12-16', 'YYYY-MM-DD'), to_date('2022-08-22', 'YYYY-MM-DD'));
+insert into Discount (LoyaltyCardNumber, ProductID, DiscountPercent, StartDate, EndDate) values (6, 6, 6, to_date('2023-01-02', 'YYYY-MM-DD'), to_date('2022-05-21', 'YYYY-MM-DD'));
